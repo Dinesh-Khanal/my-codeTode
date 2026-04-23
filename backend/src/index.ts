@@ -1,5 +1,5 @@
 import express from "express";
-
+import { Logger } from "@packages/logger";
 class Server {
   public app: express.Application;
 
@@ -24,7 +24,7 @@ class Server {
 
   public start(): void {
     this.app.listen(this.app.get("port"), () => {
-      console.log(`API is running at http://localhost:${this.app.get("port")}`);
+      Logger.info(`API is running at http://localhost:${this.app.get("port")}`);
     });
   }
 }
