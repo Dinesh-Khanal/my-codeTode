@@ -1,5 +1,10 @@
 import express from "express";
 import { Logger } from "@packages/logger";
+import { initializedDatabase } from "./config/dataSource";
+import cookieParser from "cookie-parser";
+import morgan from "morgan";
+import { corsConfig } from "./config/cors";
+
 class Server {
   public app: express.Application;
 
@@ -14,6 +19,15 @@ class Server {
       throw new Error("Environment variable `SERVER_PORT` not found");
 
     this.app.set("port", process.env.SERVER_PORT);
+    initializedDatabase();
+    // CORS configuration with emphasis on cookie support
+    this.app.use(corsConfig());
+
+    // Middleware for logging HTTP requests
+    this.app.use(morgan("tiny"));
+
+    // Add cookie parser middleware
+    this.app.use(cookieParser());
   }
 
   public routes(): void {
