@@ -51,7 +51,7 @@ export default function Navbar({
 
           <div className="flex items-center space-x-3">
             <Link to="/signin">
-              <Button>"Sign in"</Button>
+              <Button>Sign in</Button>
             </Link>
 
             <div className="flex items-center space-x-3">
