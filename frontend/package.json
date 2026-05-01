@@ -12,6 +12,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@packages/definitions": "workspace:*",
     "@packages/logger": "workspace:*",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "latest",
