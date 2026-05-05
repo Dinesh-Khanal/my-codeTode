@@ -12,6 +12,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "@packages/definitions": "workspace:*",
     "@packages/logger": "workspace:*",
     "@tailwindcss/vite": "^4.1.18",
@@ -23,6 +24,8 @@
     "lucide-react": "^0.545.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-hook-form": "^7.75.0",
+    "react-hot-toast": "^2.6.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
